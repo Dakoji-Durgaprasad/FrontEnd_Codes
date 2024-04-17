@@ -1,0 +1,28 @@
+body{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    
+  }
+  .title {
+      color: #5C6AC4;
+  }
+  div {
+    margin: 10px;
+  }
+  table {
+    margin-top: 20px;
+    border: 2px solid black;
+    width:100%;
+  }
+  
+.dateCol{
+    width:20%;
+}
+.taskCol{
+    width:100%;
+}
+.statusCol{
+    width:10%;
+}
