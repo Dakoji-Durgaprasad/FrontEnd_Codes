@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to do list</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,10 +15,10 @@
 
         <div class="container">
             <div class="txtbox">
-                <input type="text" id="task" placeholder="to do task…">
+                <input type="text" id="task" placeholder="to do task…" required>
             </div>
             <div class="dt">
-                date : <input type="date" id="date">
+                date : <input type="date" id="date" required>
             </div>
             <div class="subtn">
                 <input type="submit" value="Add" id="addBtn" onclick="addToList()">
@@ -37,6 +38,14 @@
 
         function addToList() {
 
+           dateValue = document.getElementById('date').value;
+           taskValue = document.getElementById('task').value;
+
+            if(dateValue=="" || taskValue==""){
+                alert("Please fill input !!!");
+                return;
+            }
+            else{
             var table = document.getElementById("toDoTable");
             var row = table.insertRow(1);
             var cell1 = row.insertCell(0);
@@ -47,12 +56,24 @@
             let checkbox = document.createElement('input');
             checkbox.type = "checkbox";
             checkbox.id = "chkbox";
+            checkbox.value = ""
+            checkbox.onclick = "taskComplt()";
             
             cell1.innerHTML = document.getElementById('date').value;
             cell2.innerHTML = document.getElementById('task').value;
             cell3.appendChild(checkbox);
 
-            checkbox.onclick = document.getElementById('chkbox').style.backgroundColor=black;
+            row.id ="row/s"
+            // function taskComplt(){
+            //     var completedTask = document.getElementById('row/s');
+            //     completedTask.style.backgroundColor="black";
+            //     row.innerHTML = completedTask;
+            // }
+            
+
+            }
+
+            // checkbox.onclick = document.getElementById('chkbox').style.backgroundColor=black;
 
         }
         
