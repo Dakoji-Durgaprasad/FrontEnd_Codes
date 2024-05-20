@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dp</title>
+
+    <style>
+    body{
+        background-color: #000;
+        color: #fff;
+    }
+    .parent{
+        display: block;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        margin-top: 15%;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        font-size: 25px;
+        margin: 25px;
+        padding: 20px 40px;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <ul>
+            <li><button tabindex="1">1</button></li>
+            <li><button tabindex="3">3</button></li>
+            <li><button tabindex="7">7</button></li>
+            <li><button tabindex="4">4</button></li>
+            <li><button tabindex="5">5</button></li>
+        </ul>
+        <ul>
+            <li><button tabindex="6">6</button></li>
+            <li><button tabindex="2">2</button></li>
+            <li><button tabindex="9">9</button></li>
+            <li><button tabindex="5">5</button></li>
+            <li><button tabindex="10">10</button></li>
+        </ul>
+    </div>
+</body>
+</html>
